@@ -5,12 +5,21 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from ums9620_se50 device
 $(call inherit-product, device/iflytek/ums9620_se50/device.mk)
