@@ -8,7 +8,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 ENABLE_VIRTUAL_AB := true
 
-PRODUCT_SHIPPING_API_LEVEL := 30
+# PRODUCT_SHIPPING_API_LEVEL := 30
 
 
 LOCAL_PATH := device/iflytek/ums9620_se50
